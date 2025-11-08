@@ -1058,46 +1058,50 @@ int main()
 
 
 
-		//jaguar
+		//Habitad jaguar y jaguares
+		//tronco
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(180.0f, 2.0f, 50.0f));
+		model = glm::translate(model, glm::vec3(165.0f, 2.0f, -12.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		troncoTexture.UseTexture();
 		tronco_M.RenderModel();
-
+		
+		//jaguar 1
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(200.0f, 30.0f, 45.0f));
+		model = glm::translate(model, glm::vec3(200.0f, 30.3f, -7.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		jaguarTexture.UseTexture();
 		jaguar_M.RenderModel();
-		model = glm::translate(model, glm::vec3(4.0f, 0.0f, 0.0f));
+		//jaguar 2
+		model = glm::translate(model, glm::vec3(-20.0f, -13.0f, 20.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		jaguarTexture.UseTexture();
 		jaguar_M.RenderModel();
-		model = glm::translate(model, glm::vec3(6.0f, 0.0f, 0.0f));
+		//jaguar 3
+		model = glm::translate(model, glm::vec3(-20.0f, -0.7f, -55.0f));
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		jaguarTexture.UseTexture();
 		jaguar_M.RenderModel();
-
+		//árbol
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(185.0f, -2.0f, 85.0f));
+		model = glm::translate(model, glm::vec3(177.0f, -2.0f, 26.0f));
 		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		arbolTexture.UseTexture();
 		arbol_M.RenderModel();
-
+		//árbol 2
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(180.0f, -2.0f, -10.0f));
+		model = glm::translate(model, glm::vec3(180.0f, -2.0f, -63.0f));
 		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		arbolTexture.UseTexture();
 		arbol_M.RenderModel();
-
+		//Rocas
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(200.0f, 10.0f, 50.0f));
+		model = glm::translate(model, glm::vec3(190.0f, 10.0f, -0.0f));
 		model = glm::scale(model, glm::vec3(0.7f, 0.7f, 0.7f));
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -1317,5 +1321,6 @@ void inputKeyframes(bool* keys)
 	}
 	else reproducirAnimacion = 0;
 }
+
 
 
