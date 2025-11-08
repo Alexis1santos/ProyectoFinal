@@ -941,9 +941,18 @@ int main()
 		model = glm::translate(model, glm::vec3(0.0f, -2.0f, 260.0f));
 		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		modelaux = model;
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		habitat_ajoloteTexture.UseTexture();
 		habitat_ajolote_M.RenderModel();
+
+		model = modelaux;
+		model = glm::translate(model, glm::vec3(4.2f, -0.6f, -0.5f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.3f));
+		model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		aguaTexture.UseTexture();
+		agua_M.RenderModel();
 
 		//ajolote
 		posX = centroX + radio * cos(angulovaria * velocidadGiro);
